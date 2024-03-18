@@ -1,0 +1,12 @@
+[Unit]
+Description=My Node.js App
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu/asutoshaws/
+ExecStart=sudo -u ubuntu sh -c '/home/ubuntu/.nvm/versions/node/v20.11.1/bin/node /home/ubuntu/asutoshaws/appTier_Main.js'
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
